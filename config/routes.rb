@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   :sessions => 'customers/sessions'
 	}
 
-	# root to: 'customers/sign_in'
+	# root to: 'customers/sessions#newn'
 end
