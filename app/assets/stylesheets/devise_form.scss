@@ -1,0 +1,29 @@
+
+.form-wrapper {
+  padding-top: 100px;
+  margin: 50px auto;
+  width: 500px;
+  h2 {
+    text-align: center;
+  }
+
+  .loginBtn {
+      display: block;
+      max-width: 400px;
+      padding: 12px;
+      margin: 0 auto;
+      border-radius: 30px;
+      background: #fd5068;
+      color: #fff;
+  }
+
+  .devise-link {
+    color: #fd5068;
+  }
+}
+// 管理者用
+
+.manager-login {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
