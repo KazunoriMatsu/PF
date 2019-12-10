@@ -1,0 +1,14 @@
+/log/*
+/tmp/*
+/vendor/*
+/storage/*
+/.bundle/*
+/config/master.key
+/db/*.sqlite3
+/vendor/.keep
+
+/db/development.sqlite3
+/log/development.log
+!/tmp/.keep
+/tmp/cache/assets/
+/vendor/bundle/
