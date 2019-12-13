@@ -1,4 +1,6 @@
 class PqasController < ApplicationController
+
+
 	def index
 		@questions = @question.page(params[:page]).per(3)
 	end
