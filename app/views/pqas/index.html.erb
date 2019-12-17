@@ -1,4 +1,5 @@
 <%= render 'share/header' %>
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 	<div class="bg">
 	  <%= image_tag 'sea.jpg', class: 'bg'%>
 	  <p class='bg-text1'>沖縄の絶景に恋をして</P>
@@ -7,77 +8,62 @@
 	</div>
 
 <div class="container">
-<div class="index_inner">
-    <div class="container">
-        <h3 class="title">新着投稿</h3>
+        <h3 class="title index_inner">新着投稿
+      		<a class="btn btn-outline-info list4 far fa-plus-square"  href="posts/new">新規作成</a>
+  			</h3>
         <div class="row">
               <div class="col-md-3">
                 <div class="card1" style="width: 18rem;">
-								  <img class="card-img-top" src="..." alt="カードの画像">
+								  <img class="card-img-top" src="https://www.wbf.co.jp/img/69cf5a35c52889c4f63d8b8c1bbaf579.jpg" alt="カードの画像">
 								  <div class="card-body">
-								    <h5 class="card-title">カードのタイトル</h5>
-								    <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
+								    <h5 class="card-title">投稿のタイトル</h5>
+								    <p class="card-text">投稿内容</p>
                         <button2 class="b_size btn-design">詳細を見る</button2>
 								  </div>
 								</div>
                </div>
                <div class="col-md-3">
                 <div class="card1" style="width: 18rem;">
-								  <img class="card-img-top" src="..." alt="カードの画像">
+								  <img class="card-img-top" src="https://www.wbf.co.jp/img/69cf5a35c52889c4f63d8b8c1bbaf579.jpg" alt="カードの画像">
 								  <div class="card-body">
-								    <h5 class="card-title">カードのタイトル</h5>
-								    <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
+								    <h5 class="card-title">投稿のタイトル</h5>
+								    <p class="card-text">投稿内容</p>
                         <button2 class="b_size btn-design btn1">詳細を見る</button2>
 								  </div>
 								</div>
                </div>
                <div class="col-md-3">
                 <div class="card1" style="width: 18rem;">
-								  <img class="card-img-top" src="..." alt="カードの画像">
+								  <img class="card-img-top" src="https://www.wbf.co.jp/img/69cf5a35c52889c4f63d8b8c1bbaf579.jpg" alt="カードの画像">
 								  <div class="card-body">
-								    <h5 class="card-title">カードのタイトル</h5>
-								    <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
+								    <h5 class="card-title">投稿のタイトル</h5>
+								    <p class="card-text">投稿内容</p>
                         <button2 class="b_size btn-design">詳細を見る</button2>
 								  </div>
 								</div>
                </div>
          </div>
      </div>
- </div>
 </div>
 
-
-    <div class="container">
+<div class="container">
     	<div class="row">
-        <h3 class="title">新着質問</h3>
+        <h3 class="title index_inner">新着質問
+        <a class="btn btn-outline-info list4 far fa-plus-square"  href="questions/new">新規作成</a>
+				</h3>
       </div>
         <div class="row">
+        	<% @questions.each do |question| %>
               <div class="col-md-3">
                 <div class="card1" style="width: 18rem;">
 								  <div class="card-body">
-								    <h5 class="card-title"><%= @question.title %></h5>
-								    <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
+								    <h5 class="card-title"><%= question.title %></h5>
+								    <p class="card-text"><%= question.body %></p>
                         <button2 class="b_size btn-design">詳細を見る</button2>
 								  </div>
 								</div>
                </div>
-               <div class="col-md-3">
-                <div class="card1" style="width: 18rem;">
-								  <div class="card-body">
-								    <h5 class="card-title">カードのタイトル</h5>
-								    <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
-                        <button2 class="b_size btn-design btn1">詳細を見る</button2>
-								  </div>
-								</div>
-               </div>
-               <div class="col-md-3">
-                <div class="card1" style="width: 18rem;">
-								  <div class="card-body">
-								    <h5 class="card-title">カードのタイトル</h5>
-								    <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
-                        <button2 class="b_size btn-design">詳細を見る</button2>
-								  </div>
-								</div>
-               </div>
+              <% end %>
          </div>
-     </div>
+   </div>
+ </div>

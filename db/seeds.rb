@@ -5,6 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Question.create!(
+	title: "レンタカーについて",
+	body: "空港から近いレンタカー屋さんでおすすめを教えてください。",
+	status: 0,
+	category_id: 0,
+	)
+
+
+20.times do |n|
 Customer.create!(
 	last_name:  "test",
 	first_name: "test",
@@ -15,5 +24,5 @@ Customer.create!(
 	phone_number3: '123',
 	email: 'test@test',
 	password: '123456',
-	deleted_at: "",
 	)
+end

@@ -1,0 +1,73 @@
+<%= render 'share/header' %>
+  <div class="container">
+    <h1 class = "mypage_name">マイページ</h1>
+    <div class = "mynav">
+      <ul id="nav">
+      <li><a href="#"><%= link_to '質問・回答履歴', root_path %></a></li>
+      <li><a href="#"><%= link_to '投稿一覧', root_path %></a></li>
+      <li><a href="#"><%= link_to 'お友達', root_path %></a></li>
+      <li><a href="#"><%= link_to 'お気に入り', root_path %></a></li>
+      <li><a href="#"><%= link_to '退会手続き', exit_customer_path %></a></li>
+      </ul>
+    </div>
+  </div></br>
+  <div class="container">
+  	<div class="mypage-info">
+  	<%= form_for(@customer) do |f| %>
+  	 	<div class="row">
+        <div class=" mypage_text">
+  	 		  <div class="co-lg-6">
+  		      <h3>お名前</h3>
+            <div class = "mypage_column1">
+  		        <%= f.text_field :last_name %>
+              <div class = "mypage_column2">
+  		          <%= f.text_field :first_name %>
+              </div>
+            </div>
+  	 		  </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class=" mypage_text">
+  	 	   <div class="co-lg-6">
+  		    <h3>お名前（フリガナ）</h3>
+            <div class = "mypage_column1">
+  		        <%= f.text_field :last_name_kana %>
+              <div class = "mypage_column2">
+  		          <%= f.text_field :first_name_kana %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class=" mypage_text">
+          <div class="co-lg-6">
+          	<h3>電話番号</h3>
+            <div class = "mypage_column1">
+  		        <%= f.text_field :phone_number1, size:"10x10" %> - 
+  		        <%= f.text_field :phone_number2, size:"10x10" %> - 
+  		        <%= f.text_field :phone_number3, size:"10x10" %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class=" mypage_text">
+          <div class="co-lg-6">
+          		<h3>メールアドレス</h3>
+              <div class = "mypage_column1">
+  		          <%= f.email_field :email, size:"40x10" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class = "mypage_submit">
+  			 <%= f.submit('保存する', class: 'btn btn-sm-default') %>
+        </div>
+      </div>
+  	</div>
+  <% end %>
+
+

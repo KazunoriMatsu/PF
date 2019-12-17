@@ -15,8 +15,8 @@
             <div class="collapse navbar-collapse list1" id="bs-example-navbar-collapse-2">
               <ul class="nav navbar-nav navbar-center">
                 <li><%= link_to '質問一覧', root_path %></li>
-                <li><%= link_to 'About us', root_path %></li>
-                <li><%= link_to 'マイページ', root_path %></li>
+                <li><%= link_to 'About us', about_pqas_path %></li>
+                <li><%= link_to 'マイページ', customer_path(current_customer.id) %></li>
                 <li><%= link_to 'ログアウト',destroy_customer_session_path, method: :delete  %></li>
               </ul>
             </div>

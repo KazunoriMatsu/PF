@@ -3,6 +3,17 @@ class Customer < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+
+  # pagenates_per 3
+
+  # acts_as_paranoid
+
+
+
+
+
+
 	#バリデーションチェック
   validates :last_name, presence: true, length: {minimum: 1}
   validates :first_name, presence: true, length: {minimum: 1}

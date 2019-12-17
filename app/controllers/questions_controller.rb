@@ -8,7 +8,7 @@ class QuestionsController < ApplicationController
 		@question = Question.new(question_params)
   	if @question.save
   		flash[:notice] = "質問を作成しました。"
-			redirect_to question_path(@question.id)
+			redirect_to root_path
 		else
 			@questions = Question.all
 			render :new
