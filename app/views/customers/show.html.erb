@@ -6,7 +6,7 @@
       <li><a href="#"><%= link_to '質問・回答履歴', root_path %></a></li>
       <li><a href="#"><%= link_to '投稿一覧', root_path %></a></li>
       <li><a href="#"><%= link_to 'お友達', root_path %></a></li>
-      <li><a href="#"><%= link_to 'お気に入り', root_path %></a></li>
+      <li><a href="#"><%= link_to 'お気に入り', customer_favorites_path(@customer.id) %></a></li>
       <li><a href="#"><%= link_to '退会手続き', exit_customer_path %></a></li>
       </ul>
     </div>

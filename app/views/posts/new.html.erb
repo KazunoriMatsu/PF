@@ -17,7 +17,12 @@
       </div>
       <div class="Question-box-contents row">
         <div class="col-md-4">カテゴリー</div>
+        <div class="col-md-6"><%= t.collection_select :categorie_id, Categorie.all, :id, :name, :prompt => "選択して下さい" %></div>
       </div>
+      <div class="Question-box-contents row">
+        <div class="col-md-4"><%= t.label :'写真', class: 'label-position' %></div>
+        <div class="col-md-6"><%= t.attachment_field :image %></div>
+       </div>
         <div class="Question-box-contents row">
           <div class="button col-md-12"><%= t.submit '送信する' %></div>
         </div>

@@ -9,8 +9,7 @@ class Customer < ApplicationRecord
 
   # acts_as_paranoid
 
-
-
+   has_many :favorites, dependent: :destroy
 
 
 

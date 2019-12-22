@@ -7,13 +7,20 @@ Rails.application.routes.draw do
 
   resources :customers, only: [:show, :update, :destroy] do
   	get 'exit', on: :member
+
+    resources :favorites, only: [:index]
+
   end
   resources :pqas, only: [:index] do
   	get 'about', on: :collection
   	get 'search_result', on: :collection
 	end
 
-  resources :posts, only: [:new, :create, :show]
+  resources :posts, only: [:new, :create, :show] do
+    resource :favorites, only: [:create, :destroy]
+  end
 
   resources :questions, only: [:new, :create, :show]
+
+
 end

@@ -20,7 +20,6 @@ class CustomersController < ApplicationController
 
   def destroy
       @customer = Customer.find(params[:id])
-      # 退会権限はユーザー本人のみに与えるよ！
       if @customer.id == current_customer.id
 		    @customer.destroy
 		    redirect_to root_path
