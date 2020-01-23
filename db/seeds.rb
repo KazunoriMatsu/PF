@@ -48,13 +48,13 @@ end
 	)
 end
 
-42.times do |n|
-  Post.create!(title: "title",
-                  image_id: "",
-                  body: "sample text sample text sample text sample text sample text" * 2,
-                  categorie_id: Faker::Number.between(from: 1, to: 10),
-                  )
-end
+# 42.times do |n|
+#   Post.create!(title: "title",
+#                   image_id: "",
+#                   body: "sample text sample text sample text sample text sample text" * 2,
+#                   categorie_id: Faker::Number.between(from: 1, to: 10),
+#                   )
+# end
 
 42.times do |n|
   title  = "Question-#{n+1}"

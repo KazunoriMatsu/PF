@@ -196,7 +196,7 @@
 	box-shadow: 0 3px 5px white;
 }
 
-// カードデザイン　商品一覧用
+// カードデザイン
 
 .card-body1 {
   -ms-flex: 1 1 auto;
@@ -414,7 +414,7 @@ preview_font {
   margin-left:450px;
 }
 
-// 商品画像サイズ調整
+// 画像サイズ調整
 .img-size {
 	width: 200px;
 	height: 200px;
@@ -422,24 +422,6 @@ preview_font {
 	margin: 20px auto;
 }
 
-// 商品情報
-.price {
-	font-size: 23px;
-	margin-top: 5px;
-}
-
-.amount {
-	font-size: 20px;
-	margin-top: 15px;
-	margin-bottom: 5px;
-}
-
-
-.img-shadow {
-  box-shadow: 0 5px 8px #696969;
-  width: 350px;
-  height: 350px;
-}
 
 /* ここから下がボタンのCSS　*/
 .btn-border {
@@ -531,30 +513,6 @@ preview_font {
 
 .btn-default:visited {
 	background-color: #FF001E;
-}
-
-//  カレンダーの位置を調整
-
-#carendar-position {
-  position: relative;
-}
-
-
-.icon-field {
-	width: 35%;
-	float: right;
-	margin-right: 100px;
-	margin-bottom: 15px;
-}
-
-.fa-thumbs-up {
-	font-size: 40px;
-	margin: 15px auto;
-}
-
-
-.container order{
-	margin: 20px;
 }
 
 
@@ -676,4 +634,17 @@ dl.search-box dd{
   margin-top: 20px;
   color: #AFEEEE;
   margin-left: 900px;
+}
+
+.link_color_start{
+  text-decoration:none;
+  color: #333230;
+  background: linear-gradient(transparent 60%, #cdd9db 10%);
+  padding-top: 10px;
+  font-size: 20px;
+    &:hover {
+  color: #3471a1;
+/*  border-bottom: 1px solid;*/
+  background: linear-gradient(transparent 60%, #5b87ad 60%);
+  }
 }

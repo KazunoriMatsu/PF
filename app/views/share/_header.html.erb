@@ -23,7 +23,7 @@
             <div class="list3"><%= "#{current_customer.last_name}" %>さま</div>
           </div>
         </nav>
-      <!-- customer がログインしていなかっ場合 -->
+      <!-- customer がログインしていなかった場合 -->
       <% else %>
         <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container-fluid block">
@@ -40,7 +40,7 @@
             <div class="collapse navbar-collapse list1" id="bs-example-navbar-collapse-2">
               <ul class="nav navbar-nav">
                 <li><%= link_to '質問一覧',root_path%></li>
-                <li><%= link_to 'About us', root_path %></li>
+                <li><%= link_to 'About us', about_pqas_path %></li>
                 <li><%= link_to 'ログイン',new_customer_session_path%></li>
               </ul>
             </div>
