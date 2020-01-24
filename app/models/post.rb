@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
-		belongs_to :customer, optional: true
+		belongs_to :customer
 		belongs_to :categorie
+		belongs_to :pqa, optional: true
 
 
 		attachment :image

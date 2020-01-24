@@ -12,39 +12,27 @@
       		<a class="btn btn-outline-info list4 far fa-plus-square"  href="posts/new">新規作成</a>
   			</h3>
         <div class="row">
+        	 <% @posts.each do |post| %>
               <div class="col-md-3">
                 <div class="card1" style="width: 18rem;">
-								  <img class="card-img-top" src="https://www.wbf.co.jp/img/69cf5a35c52889c4f63d8b8c1bbaf579.jpg" alt="カードの画像">
-								  <div class="card-body">
-								    <h5 class="card-title">投稿のタイトル</h5>
-								    <p class="card-text">投稿内容</p>
+                	<div class="img-size">
+              <%= attachment_image_tag post, :image, :fill, 285, 200, format: 'jpeg' %></div>
+                  <div class="card-body">
+                    <h5 class="card-title"><%= post.title %></h5>
+                    <p class="card-text ellipsis"><%= post.body %></p>
+                    <li1><%= truncate(post.categorie.name, length: 15) %></li1>
+                    <%= link_to post_path(post.id) do %>
                         <button2 class="b_size btn-design">詳細を見る</button2>
-								  </div>
-								</div>
-               </div>
-               <div class="col-md-3">
-                <div class="card1" style="width: 18rem;">
-								  <img class="card-img-top" src="https://www.wbf.co.jp/img/69cf5a35c52889c4f63d8b8c1bbaf579.jpg" alt="カードの画像">
-								  <div class="card-body">
-								    <h5 class="card-title">投稿のタイトル</h5>
-								    <p class="card-text">投稿内容</p>
-                        <button2 class="b_size btn-design btn1">詳細を見る</button2>
-								  </div>
-								</div>
-               </div>
-               <div class="col-md-3">
-                <div class="card1" style="width: 18rem;">
-								  <img class="card-img-top" src="https://www.wbf.co.jp/img/69cf5a35c52889c4f63d8b8c1bbaf579.jpg" alt="カードの画像">
-								  <div class="card-body">
-								    <h5 class="card-title">投稿のタイトル</h5>
-								    <p class="card-text">投稿内容</p>
-                        <button2 class="b_size btn-design">詳細を見る</button2>
-								  </div>
-								</div>
-               </div>
-         </div>
-     </div>
-</div>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <div class="page">
+           <%= paginate @posts, class: "paginate" %>
+          </div>
 
 <div class="container">
     	<div class="row">
@@ -58,12 +46,12 @@
                 <div class="card1" style="width: 18rem;">
 								  <div class="card-body">
 								    <h5 class="card-title"><%= question.title %></h5>
-								    <p class="card-text"><%= question.body %></p>
+								    <p class="card-text"><%= truncate(question.body, length: 15) %></p>
+								     <li1><%= question.categorie.name %></li1>
                         <button2 class="b_size btn-design">詳細を見る</button2>
 								  </div>
 								</div>
                </div>
               <% end %>
-         </div>
    </div>
  </div>

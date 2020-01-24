@@ -3,14 +3,18 @@ class PqasController < ApplicationController
 
 	def index
 		@questions = Question.page(params[:page]).per(3)
+		@posts = Post.page(params[:page]).per(3)
+		respond_to do |format|
+      format.html
+      format.js
+    end
 
 	end
 
 	def search_results
 	end
 
-	# attachment :image
-	# acts_as_paranoid
+
 
 	private
 	 	def pqa_params
@@ -20,4 +24,5 @@ class PqasController < ApplicationController
 		def question_params
 			params.require(:question).permit(:customer_id, :title, :body, :status, :categorie_id)
 	  end
+
 end

@@ -5,12 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# Question.create!(
-# 	title: "レンタカーについて",
-# 	body: "空港から近いレンタカー屋さんでおすすめを教えてください。",
-# 	status: 0,
-# 	categorie_id: 0,
-# 	)
 
 
 
@@ -28,18 +22,18 @@ Customer.create!(
 	)
 
 
-50.times do |n|
- Customer.create!(first_name: Faker::Bank.name,
-				  last_name: Faker::Name.name,
-				  last_name_kana: Faker::Name.name,
-				  first_name_kana: Faker::Name.name,
-				  phone_number1: Faker::Number.between(from: 1, to: 9999),
-				  phone_number2: Faker::Number.between(from: 1, to: 9999),
-				  phone_number3: Faker::Number.between(from: 1, to: 9999),
-				  email: Faker::Internet.unique.free_email,
-				  password: Faker::Number.between(from: 100000, to: 999999),
-				  deleted_at: "")
-end
+# 50.times do |n|
+#  Customer.create!(first_name: Faker::Bank.name,
+# 				  last_name: Faker::Name.name,
+# 				  last_name_kana: Faker::Name.name,
+# 				  first_name_kana: Faker::Name.name,
+# 				  phone_number1: Faker::Number.between(from: 1, to: 9999),
+# 				  phone_number2: Faker::Number.between(from: 1, to: 9999),
+# 				  phone_number3: Faker::Number.between(from: 1, to: 9999),
+# 				  email: Faker::Internet.unique.free_email,
+# 				  password: Faker::Number.between(from: 100000, to: 999999),
+# 				  deleted_at: "")
+# end
 
 
 10.times do |n|

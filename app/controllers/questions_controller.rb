@@ -6,6 +6,7 @@ class QuestionsController < ApplicationController
 
 	def create
 		@question = Question.new(question_params)
+		@question.customer_id = current_customer.id
   	if @question.save
   		flash[:notice] = "質問を作成しました。"
 			redirect_to root_path

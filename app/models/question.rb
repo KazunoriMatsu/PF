@@ -1,6 +1,6 @@
 class Question < ApplicationRecord
 	belongs_to :customer
-	belongs_to :pqa
+	belongs_to :pqa, optional: true
 	belongs_to :categorie
 
 

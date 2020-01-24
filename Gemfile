@@ -18,6 +18,7 @@ gem 'font-awesome-sass', '~> 5.4.1'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem "kaminari"
+gem 'jquery-datatables-rails'
 gem 'faker'
 gem 'pry-byebug'
 
