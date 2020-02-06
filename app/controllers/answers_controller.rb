@@ -1,18 +1,15 @@
 class AnswersController < ApplicationController
 
-	def new
-		# @question = Question.find(params[:id])
-		@answer = Answer.new
-	end
-
 	def create
+		@question = Question.find(params[:question_id])
 		@answer = Answer.new(answer_params)
 		@answer.customer_id = current_customer.id
+		@answer.question_id = @question.id
   	if @answer.save
   		flash[:notice] = "質問を作成しました。"
-			redirect_to root_path
+			redirect_to question_path(@question.id)
 		else
-			render :new
+			render "questions/show"
 		end
 	end
 

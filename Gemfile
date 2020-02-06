@@ -21,6 +21,8 @@ gem "kaminari"
 gem 'jquery-datatables-rails'
 gem 'faker'
 gem 'pry-byebug'
+gem 'rb-readline'
+
 
 
 group :development, :test do

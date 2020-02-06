@@ -18,7 +18,31 @@
                       </div>
 								</div>
               </div>
-   </div>
+        </div>
+
+        <h2 class = "review_forms">レビュー投稿</h2>
+    <div class="container">
+      <%= form_for [@question, @answer] do |t| %>
+        
+        <div class = "review_form2">
+          <div class="row">
+            <div class="col-sm-1">
+              <h4 class = "review_title2">本文</h4>
+            </div>
+          <div class="col-sm-4">
+            <div class = "review_body">
+              <%= t.text_area :body, size:"100x5" %>
+            </div>
+          </div>
+        </div>
+        <div class = "review_submit">
+          <%= t.submit '投稿する', class: 'btn btn-warning' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
     </div>
    <input type="hidden" id="questionId" name="questionId" value="question">
     <%= hidden_field_tag :id, @question.id %>
