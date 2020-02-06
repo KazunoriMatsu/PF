@@ -18,7 +18,17 @@ def new
 
 	def show
 		@post = Post.find(params[:id])
+		@customer =Customer.find(params[:id])
 	end
+
+	def destroy
+		@post = Post.find(params[:id])
+		@customer = Customer.find(params[:id])
+      if @customer.id == current_customer.id
+      	@post.destroy
+		    redirect_to root_path
+      end
+  end
 
 
 	private

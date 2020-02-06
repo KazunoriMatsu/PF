@@ -5,11 +5,8 @@ class Customer < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
 
-  # pagenates_per 3
-
-  # acts_as_paranoid
-
    has_many :favorites, dependent: :destroy
+   has_many :answers
 
 
 

@@ -1,0 +1,28 @@
+<div class="container">
+    	<div class="row">
+        <h3 class="title index_inner">新着質問
+        <a class="btn btn-outline-info list4 far fa-plus-square"  href="questions/new">新規作成</a>
+				</h3>
+      </div>
+        <div class="row">
+              <div class="col-md-3">
+                <div class="card1" style="width: 18rem;">
+								  <div class="card-body">
+								    <h5 class="card-title"><%= @question.title %></h5>
+								    <p class="card-text"><%= @question.body %></p>
+								     <li1><%= @question.categorie.name %></li1>
+
+                        <%= link_to new_question_answer_path(@question) do %>
+                        <button2 class="b_size btn-design">詳細を見る</button2>
+                    <% end %>
+                      </div>
+								</div>
+              </div>
+   </div>
+    </div>
+   <input type="hidden" id="questionId" name="questionId" value="question">
+    <%= hidden_field_tag :id, @question.id %>
+    <%= hidden_field_tag :title, @question.title %>
+    <%= hidden_field_tag :body, @question.body %>
+    <%= hidden_field_tag :categorie, @question.categorie %>
+

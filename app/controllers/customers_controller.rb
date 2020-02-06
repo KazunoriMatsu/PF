@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
 
-# before_action :ensure_correct_customer, {only: [:show, :exit, :update, :destroy]}
+before_action :ensure_correct_customer, {only: [:show, :exit, :update, :destroy]}
 
   def show
     @customer = Customer.find(params[:id])
@@ -29,6 +29,15 @@ class CustomersController < ApplicationController
    def exit
    	@customer = Customer.find(params[:id])
    end
+
+     #ここでユーザーのみが編集できるようにチェックするよ！
+    def ensure_correct_customer
+      @customer = Customer.find(params[:id])
+      #ユーザーIDのチェックするよ！
+    unless @customer.id == current_customer.id
+      redirect_to customer_path(current_customer)
+    end
+  end
 
 	private
   def customer_params

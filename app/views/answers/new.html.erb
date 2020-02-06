@@ -1,0 +1,38 @@
+<!-- 回答作成ページ -->
+
+<%= render 'share/header' %>
+<div class="container Question">
+  <div class="row">
+    <div class="Question-title col-md-12">回答作成フォーム</div>
+  </div>
+
+
+  <div class="row Question-box-contents">
+        <div class="col-md-4">タイトル</div>
+        <div class="col-md-6"><%= @question.title %></div>
+      </div>
+      <div class="Question-box-contents row">
+        <div class="col-md-4">質問内容</div>
+        <div class="col-md-6"><%= @question.body %></div>
+      </div>
+      <div class="Question-box-contents row">
+        <div class="col-md-4">カテゴリー</div>
+        <div class="col-md-6"><%= @question.category.name %></div>
+      </div>
+
+  <div class="row">
+  <div class="Question-box col-md-12">
+    <%= form_for [@answer] do |t| %>
+      <div class="Question-box-contents row">
+        <div class="col-md-4">回答内容</div>
+        <div class="col-md-6"><%= t.text_field :body %></div>
+      </div>
+        <div class="Question-box-contents row">
+          <div class="button col-md-12"><%= t.submit '送信する' %></div>
+        </div>
+    <% end %>
+
+
+          </div>
+        </div>
+      </div>
