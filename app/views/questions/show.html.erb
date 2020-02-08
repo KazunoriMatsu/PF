@@ -1,44 +1,49 @@
+<%= render 'share/header' %>
 <div class="container">
     	<div class="row">
         <h3 class="title index_inner">新着質問
         <a class="btn btn-outline-info list4 far fa-plus-square"  href="questions/new">新規作成</a>
 				</h3>
       </div>
-        <div class="row">
-              <div class="col-md-3">
-                <div class="card1" style="width: 18rem;">
-								  <div class="card-body">
-								    <h5 class="card-title"><%= @question.title %></h5>
-								    <p class="card-text"><%= @question.body %></p>
-								     <li1><%= @question.categorie.name %></li1>
+      <div class="row">
+            <div class="col-md-4">
+              <div class="card1" style="width: 35rem;">
+							  <div class="card-body">
+							    <h5 class="card-title"><%= @question.title %></h5>
+							    <p class="card-text"><%= @question.body %></p>
+							     <li1><%= @question.categorie.name %></li1>
+                      <%= link_to new_question_answer_path(@question) do %>
+                      <button2 class="b_size btn-design">詳細を見る</button2>
+                  <% end %>
+                    </div>
+							</div>
+            </div>
 
-                        <%= link_to new_question_answer_path(@question) do %>
-                        <button2 class="b_size btn-design">詳細を見る</button2>
-                    <% end %>
-                      </div>
-								</div>
-              </div>
-        </div>
+      <div class="col-md-2"></div>
 
+      <div class="col-md-4">
         <h2 class = "review_forms">回答投稿</h2>
-    <div class="container">
-      <%= form_for [@question, @answer] do |t| %>
+        <%= form_for [@question, @answer] do |t| %>
         <div class = "review_form2">
           <div class="row">
             <div class="col-sm-1">
               <h4 class = "review_title2">本文</h4>
             </div>
-          <div class="col-sm-4">
-            <div class = "review_body">
-              <%= t.text_area :body, size:"100x5" %>
+            <div class="col-sm-4">
+              <div class = "review_body">
+                <%= t.text_area :body, size:"80x5" %>
+              </div>
             </div>
           </div>
-        </div>
-        <div class = "review_submit">
+        <div class = "review_submit mx-auto">
           <%= t.submit '投稿する', class: 'btn btn-warning' %>
-          </div>
+        </div>
         <% end %>
+        </div>
       </div>
-    </div>
+      </div>
+</div>
 
+<div class="container">
+  
 </div>

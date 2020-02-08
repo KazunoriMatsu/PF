@@ -16,7 +16,8 @@
               <div class="col-md-3">
                 <div class="card1" style="width: 18rem;">
                 	<div class="img-size">
-              <%= attachment_image_tag post, :image, :fill, 285, 200, format: 'jpeg' %></div>
+              		<%= attachment_image_tag post, :image, :fill, 285, 200, format: 'jpeg' %>
+              		</div>
                   <div class="card-body">
                     <h5 class="card-title"><%= truncate(post.title, length: 17) %></h5>
                     <p class="card-text ellipsis"><%= post.body %></p>
@@ -29,31 +30,29 @@
               </div>
             <% end %>
           </div>
-        </div>
-        <div class="page">
-           <%= paginate @posts, class: "paginate" %>
-          </div>
+</div>
+        <div class="page"><%= paginate @posts, class: "paginate" %></div>
 
 <div class="container">
-    	<div class="row">
-        <h3 class="title index_inner">新着質問
-        <a class="btn btn-outline-info list4 far fa-plus-square"  href="questions/new">新規作成</a>
-				</h3>
-      </div>
-        <div class="row">
-        	<% @questions.each do |question| %>
-              <div class="col-md-3">
-                <div class="card1" style="width: 18rem;">
-								  <div class="card-body">
-								    <h5 class="card-title"><%= truncate(question.title, length: 15) %></h5>
-								    <p class="card-text"><%= truncate(question.body, length: 15) %></p>
-								     <li1><%= question.categorie.name %></li1>
-                      <%= link_to question_path(question.id) do %>
-                        	<button2 class="b_size btn-design">詳細を見る</button2>
-                    	<% end %>
-								  </div>
-								</div>
-               </div>
-              <% end %>
-   </div>
+    		<div class="row">
+      	  <h3 class="title index_inner">新着質問
+      	  <a class="btn btn-outline-info list4 far fa-plus-square"  href="questions/new">新規作成</a>
+					</h3>
+      	</div>
+      	<div class="row">
+      		<% @questions.each do |question| %>
+      	  <div class="col-md-3">
+      	    <div class="card1" style="width: 18rem;">
+		  				<div class="card-body">
+		  	  			<h5 class="card-title"><%= truncate(question.title, length: 15) %></h5>
+		  	  			<p class="card-text"><%= truncate(question.body, length: 15) %></p>
+		  	   			<li1><%= question.categorie.name %></li1>
+      	        <%= link_to question_path(question.id) do %>
+      	        <button2 class="b_size btn-design">詳細を見る</button2>
+      	        <% end %>
+		  				</div>
+						</div>
+      	  </div>
+      	  <% end %>
+   			</div>
  </div>
