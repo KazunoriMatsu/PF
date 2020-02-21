@@ -15,6 +15,14 @@ ActiveRecord::Schema.define(version: 2020_02_13_033706) do
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "last_name", null: false
+    t.string "first_name", null: false
+    t.string "last_name_kana", null: false
+    t.string "first_name_kana", null: false
+    t.string "phone_number1", null: false
+    t.string "phone_number2", null: false
+    t.string "phone_number3", null: false
+    t.datetime "deleted_at"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
