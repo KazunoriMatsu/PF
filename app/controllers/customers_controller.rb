@@ -39,6 +39,18 @@ before_action :ensure_correct_customer, {only: [:show, :exit, :update, :destroy]
     end
   end
 
+  def questions
+    @customer = Customer.find(params[:id])
+    @question = Question.all
+  end
+
+  def posts
+    @customer = Customer.find(params[:id])
+    posts = Post.all
+  end
+
+
+
 	private
   def customer_params
     params.require(:customer).permit(:email, :last_name, :first_name, :last_name_kana, :first_name_kana, :phone_number1, :phone_number2, :phone_number3)

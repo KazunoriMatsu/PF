@@ -11,15 +11,13 @@
 							  <div class="card-body">
 							    <h5 class="card-title"><%= @question.title %></h5>
 							    <p class="card-text"><%= @question.body %></p>
-							     <li1><%= @question.categorie.name %></li1>
-                      <%= link_to new_question_answer_path(@question) do %>
-                      <button2 class="b_size btn-design">詳細を見る</button2>
-                  <% end %>
-                    </div>
+							     <li1><%= @question.categorie.name %></li1></br>
+                   <%= link_to "削除", question_path(@question), method: :delete %>
+                </div>
 							</div>
             </div>
 
-      <div class="col-md-2"></div>
+      <div class="col-md-2"> </div>
 
       <div class="col-md-4">
         <h2 class = "review_forms">回答投稿</h2>
@@ -35,15 +33,11 @@
               </div>
             </div>
           </div>
-        <div class = "review_submit mx-auto">
+        <div class = "review_submit">
           <%= t.submit '投稿する', class: 'btn btn-warning' %>
         </div>
         <% end %>
         </div>
       </div>
       </div>
-</div>
-
-<div class="container">
-  
 </div>

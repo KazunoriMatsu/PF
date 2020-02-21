@@ -23,12 +23,12 @@ def new
 
 	def destroy
 		@post = Post.find(params[:id])
-		@customer = Customer.find(params[:id])
-      if @customer.id == current_customer.id
+      if @post.customer.id == current_customer.id
       	@post.destroy
 		    redirect_to root_path
       end
   end
+
 
 
 	private

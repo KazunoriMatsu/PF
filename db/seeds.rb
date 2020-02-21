@@ -21,6 +21,12 @@ Customer.create!(
 	deleted_at: "",
 	)
 
+Admin.create!(
+	email: 'test@test',
+	password: '123456',
+	deleted_at: "",
+	)
+
 
 # 50.times do |n|
 #  Customer.create!(first_name: Faker::Bank.name,

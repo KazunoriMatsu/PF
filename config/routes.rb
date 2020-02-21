@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  devise_for :admins
+
+  # admin用のルーティング
+  namespace :admin do
+    resources :categories, only: [:create, :edit, :update, :new, :destroy]
+  end
+
+
   # customer用のルーティング
   devise_for :customers
   root to: 'pqas#index'
@@ -8,6 +16,8 @@ Rails.application.routes.draw do
 
   resources :customers, only: [:show, :update, :destroy] do
   	get 'exit', on: :member
+    get 'questions', on: :member
+    get 'posts', on: :member
 
     resources :favorites, only: [:index]
 
