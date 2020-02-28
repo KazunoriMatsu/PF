@@ -19,12 +19,14 @@ class QuestionsController < ApplicationController
 	def show
 		@question = Question.find(params[:id])
 		@answer = Answer.new
+		@answers = @question.answers
 	end
 
 	def destroy
 		@question = Question.find(params[:id])
     if @question.customer.id == current_customer.id
     	@question.destroy
+    	redirect_to root_path
     else
     	redirect_to root_path
     end

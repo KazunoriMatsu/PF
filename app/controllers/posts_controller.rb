@@ -18,7 +18,7 @@ def new
 
 	def show
 		@post = Post.find(params[:id])
-		@customer =Customer.find(params[:id])
+		@customer = @post.customer
 	end
 
 	def destroy

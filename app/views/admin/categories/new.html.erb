@@ -1,0 +1,20 @@
+<div class="container">
+    <p>ジャンル登録</p>
+</div>
+
+<hr class="my-4">
+
+<div class="container">
+    <%= form_for @categorie, url: admin_categories_path do |f| %>
+
+    <div class="field">
+        <%= f.label :"ジャンル名" %><br />
+        <%= f.text_field :name,  autofocus: true %>
+    </div>
+
+    <div class="actions"><br />
+            <%= f.submit "登録する", class: 'btn btn-primary' %>
+    </div>
+
+    <% end %>
+</div>
