@@ -12,3 +12,4 @@
 !/tmp/.keep
 /tmp/cache/assets/
 /vendor/bundle/
+/.env
