@@ -9,7 +9,7 @@ class Admin::CategoriesController < ApplicationController
     if @categorie.save
     redirect_to new_admin_category_path
     else
-      redirect_to new_admin_category_path
+      redirect_to root_path
     end
   end
 
