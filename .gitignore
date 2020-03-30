@@ -13,3 +13,5 @@
 /tmp/cache/assets/
 /vendor/bundle/
 /.env
+
+/config/ .master.key
